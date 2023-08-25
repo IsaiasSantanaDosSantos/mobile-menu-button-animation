@@ -1,0 +1,640 @@
+@import url(' https://fonts.cdnfonts.com/css/brandon-grotesque-regular ');
+:root {
+  /* Major colors  */
+  --primary: #22d2b3;
+  --secundary: #003399;
+  --support: #199983;
+  /* Page colors  */
+  --blackColor: #000;
+  --transparentdarkColor: #081018c4;
+  --whiteColor: #fff;
+  --grayColor: #5c6f82;
+  --iceColor: #f5f5f5;
+  --cardsBarColor: #cbcdce;
+  /* Other pages colors  */
+  --findAppMaskColor: #0c162f;
+  --transparentWindow: #081018eb;
+  --findAppMasc: #081018;
+  --redColor: red;
+  --inputsBgLogin: #ffffff1f;
+  /* Fonts */
+  --defaultFont: 'Montserrat';
+  --Oswald: 'Oswald';
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--defaultFont);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: var(--whiteColor);
+  position: fixed;
+  border-bottom: 1px solid #ffffff24;
+  z-index: 3;
+  margin-top: -60px;
+  border: 1px solid #08101845;
+}
+.containerNavbar {
+  max-width: 1000px;
+  width: 95%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbarImg {
+  width: 160px;
+}
+.navbarImg img {
+  width: 100%;
+}
+
+.navbarMenu {
+  width: auto;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbarMenu .itemsMenuNavbar,
+.itemsMenuNavbar a,
+.coletaLeadLogin {
+  color: var(--blackColor);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.navbarMenu .actived a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.coletaLeadLogin {
+  background-color: var(--primary);
+  color: var(--whiteColor);
+  padding: 7px 25px;
+  border-radius: 5px;
+  font-size: 11px;
+  margin-right: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.registerNavbarBtn {
+  background-color: var(--secundary);
+
+  color: var(--whiteColor);
+  padding: 7px 25px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: bold;
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.coletaLeadLogin:active,
+.registerNavbarBtn:active {
+  opacity: 0.7;
+}
+
+.navbarMenu .itemsMenuNavbar:hover,
+.navbarMenu .itemsMenuNavbar a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+.navbarMenu .itemsMenuNavbar:not(:last-child) {
+  margin-right: 15px;
+}
+
+.containerNavbar .mobileBtnMobile {
+  color: var(--blackColor);
+  font-size: 30px;
+  margin-right: 20px;
+}
+
+.containerNavbar i {
+  display: none;
+}
+.containerNavbar .mobileBtnMobile:active {
+  transform: rotate(-10deg);
+}
+/* End Navbar */
+.menuMobileBtn {
+  width: 26px;
+  height: 28px;
+  cursor: pointer;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  row-gap: 7px;
+  /* border: 1px solid #000; */
+}
+.menuMobileBars {
+  width: 100%;
+  height: 3px;
+  border-radius: 20px;
+  background-color: var(--blackColor);
+  /* transition: 0.8s; */
+}
+.animated-text {
+  display: none;
+}
+/* .menuMobileBars:nth-child(2) {
+  display: none;
+}
+.menuMobileBars:nth-child(1) {
+  transform: rotate(-50deg);
+  margin-top: 0px;
+  width: 140%;
+}
+.menuMobileBars:nth-child(3) {
+  transform: rotate(50deg);
+  margin-top: -10px;
+  width: 140%;
+} */
+
+/* Example section */
+.exampleSection {
+  width: 100%;
+  margin-top: 60px;
+  color: var(--whiteColor);
+  background-image: url(https://images.pexels.com/photos/5439/earth-space.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-position: center center;
+  background-size: cover;
+}
+.exampleContaner {
+  max-width: 1000px;
+  width: 95%;
+  height: 300px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.title {
+  text-align: center;
+  font-size: 35px;
+}
+.subTitle {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+/* End of Example section */
+
+/* Example section */
+.simpleSection {
+  width: 100%;
+  padding: 50px 0;
+  color: var(--blackColor);
+}
+.simpleContaner {
+  max-width: 1000px;
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.simpleText {
+  text-align: justify;
+  text-indent: 50px;
+  margin-bottom: 10px;
+}
+.simpleBox {
+  width: 100%;
+  display: flex;
+  /* justify-content: space-between;
+  align-items: start; */
+  column-gap: 15px;
+}
+.simpleBox img {
+  width: 40%;
+}
+/* End of Example section */
+/* Media query */
+
+/* Buttun section */
+.newButtonBox {
+  position: absolute;
+  right: 80px;
+  bottom: 50px;
+  width: auto;
+  display: flex;
+}
+.registerNewButton {
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: var(--primary);
+  color: var(--whiteColor);
+  padding: 8px 25px;
+  width: auto;
+  text-align: center;
+  border-radius: 15px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.5s;
+  animation: zoomAnimation ease 1.2s infinite;
+}
+.registerNewButton:hover {
+  background-color: var(--whiteColor);
+  color: var(--primary);
+  border: 1px solid;
+}
+@keyframes zoomAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* End of Buttun section */
+
+/* Form section */
+/* Popup test */
+/* .formSection {
+  background-color: var(--transparentdarkColor);
+  backdrop-filter: blur(6px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+.formSectionContainer {
+  width: auto;
+  height: auto;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: end;
+  background-color: var(--whiteColor);
+}
+.formSectionClosed {
+  width: auto;
+  display: block;
+  text-align: end;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.formSectionClosed:hover {
+  transform: scale(1.05);
+}
+.formSectionContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.formSectionTitle {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.formSectionInput {
+  width: 100%;
+  margin-bottom: 15px;
+  height: 35px;
+}
+.btnEnviarLead {
+  background-color: var(--primary);
+  color: var(--whiteColor);
+  border-radius: 15px;
+  text-transform: uppercase;
+  padding: 8px 20px;
+} */
+/* End of Popup test */
+
+/* Fly Windows */
+.formSection {
+  max-width: 350px;
+  width: 90%;
+  height: auto;
+  display: flex;
+  box-shadow: 0 0 40px -16px var(--blackColor);
+  position: fixed;
+  bottom: 23px;
+  right: -435px;
+  background-color: var(--whiteColor);
+  transition: all 0.5s;
+  z-index: 100;
+}
+.formSectionContainer {
+  width: 100%;
+  display: block;
+  text-align: center;
+  position: relative;
+  padding: 25px;
+}
+.formSectionClosed {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  left: auto;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.formSectionClosed:hover {
+  transform: scale(1.05);
+}
+.formSectionContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.formSectionTitle {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.formSectionContent .formFields {
+  width: 100% !important;
+  height: 35px !important;
+  padding-left: 15px !important;
+  margin-bottom: 15px !important;
+  font-family: var(--defaultFont) !important;
+}
+.formSectionContent .form-check {
+  width: 100% !important;
+  display: flex !important;
+  font-size: 12px !important;
+  align-items: center !important;
+  column-gap: 10px !important;
+  padding-left: 20px !important;
+}
+.formSectionContent #btnEnviarLead {
+  background-color: var(--primary) !important;
+  color: var(--whiteColor) !important;
+  border-radius: 15px !important;
+  text-transform: uppercase !important;
+  padding: 8px 20px !important;
+  font-weight: bold !important;
+  white-space: nowrap !important;
+  width: auto !important;
+}
+.formSectionContent #lblMsg {
+  color: var(--primary) !important;
+}
+/* End of Fly Windows */
+/* End of Form section */
+
+/* Footer section  */
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  background-color: var(--grayColor);
+  color: var(--whiteColor);
+}
+/* End of Footer section  */
+@media (max-width: 992px) {
+  /* Navbar */
+  .menuMobileBtn {
+    display: flex;
+  }
+  .navbarMenu {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(6px);
+    display: none;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+    row-gap: 30px;
+    padding: 20px 0 65px 0;
+    margin-top: 0px;
+  }
+  .navbarMenu::before {
+    content: '';
+    background-image: url(https://images.pexels.com/photos/1341279/pexels-photo-1341279.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .coletaLeadLogin,
+  .navbarMenu .itemsMenuNavbar,
+  .registerNavbarBtn {
+    margin-right: 15px;
+  }
+  .coletaLeadLogin,
+  .registerNavbarBtn {
+    margin-right: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .navbarMenu .itemsMenuNavbar,
+  .itemsMenuNavbar a {
+    color: var(--whiteColor);
+    font-size: 18px;
+  }
+  .coletaLeadLogin,
+  .registerNavbarBtn {
+    font-size: 16px;
+  }
+  .containerNavbar i {
+    display: block;
+  }
+
+  /* Terrestrial Globe section */
+  .terrestrialGlobeSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    /* background-image: url(https://images.pexels.com/photos/1341279/pexels-photo-1341279.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); */
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  /* ########## */
+
+  .animated-text {
+    background: linear-gradient(
+      to right,
+      var(--secundary),
+      var(--secundary),
+      var(--secundary),
+      var(--secundary),
+      var(--secundary),
+      lightblue,
+      var(--whiteColor),
+      lightblue,
+      var(--secundary),
+      var(--secundary),
+      var(--secundary),
+      var(--secundary),
+      var(--secundary)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 300% auto;
+    animation: shine 15s linear infinite;
+    font-family: var(--defaultFont), sans-serif;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+  .ballAnimated {
+    background: linear-gradient(
+      to right,
+      var(--secundary),
+      var(--secundary),
+      lightblue,
+      var(--whiteColor),
+      lightblue,
+      var(--secundary),
+      var(--secundary)
+    );
+    background-size: 350% auto;
+    animation: shine 15s linear infinite;
+  }
+  .animated-text:nth-child(1) {
+    font-size: 65px;
+  }
+  .animated-text:nth-child(2) {
+    font-size: 30px;
+    margin-top: -19px;
+  }
+  .logoBox {
+    width: 50px;
+    height: 50px;
+    position: relative;
+  }
+  .logoBalls {
+    width: 20%;
+    height: 20%;
+    /* border: 1px solid #fff; */
+    border-radius: 50%;
+    position: absolute;
+  }
+  .logoBalls:nth-child(1) {
+    top: 0;
+    left: 0;
+  }
+  .logoBalls:nth-child(2) {
+    top: 0;
+    left: 25%;
+  }
+  .logoBalls:nth-child(3) {
+    top: 0;
+    left: 50%;
+  }
+  .logoBalls:nth-child(4) {
+    top: 0;
+    left: 75%;
+  }
+  .logoBalls:nth-child(5) {
+    top: 25%;
+    left: 75%;
+  }
+  .logoBalls:nth-child(6) {
+    top: 25%;
+    left: 50%;
+  }
+  .logoBalls:nth-child(7) {
+    top: 50%;
+    left: 75%;
+  }
+  .logoBalls:nth-child(8) {
+    top: 50%;
+    left: 25%;
+  }
+  .logoBalls:nth-child(9) {
+    top: 75%;
+    left: 75%;
+  }
+  .logoBalls:nth-child(10) {
+    top: 75%;
+    left: 0%;
+  }
+
+  @keyframes shine {
+    100% {
+      background-position: -100%;
+    }
+    0% {
+      background-position: 200%;
+    }
+  }
+  /* ########## */
+
+  .globe {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-image: url(https://www.guiageografico.com/mapas/mapa/imagem-mundo.jpg);
+    /* background-image: url(https://teletime.com.br/wp-content/uploads/2021/03/earth-3866609-696x442.jpg); */
+    background-size: cover;
+    box-shadow: -14px -14px 14px black inset, 5px 5px 17px white inset,
+      0px 0px 8px #3a86ff;
+    animation: rotate 35s linear infinite;
+    margin-bottom: -100px;
+  }
+  @keyframes rotate {
+    to {
+      background-position: 100%;
+    }
+  }
+  /* End of Terrestrial Globe section */
+  /* End Navbar */
+}
